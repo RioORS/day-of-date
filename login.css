@@ -1,0 +1,137 @@
+:root {
+    --lightlightBlue: #e1f1fd;
+    --backgroundColor: #4663ac;
+    --secondaryBlue: #C1D8F0;   
+    --darkFontColor: #00012e;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-image: url(https://st3.depositphotos.com/14061578/36794/i/450/depositphotos_367944968-stock-photo-blue-heart-seamless-pattern-watercolor.jpg);
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+    font-family: "bahnschrift";
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 390px;
+    width: 600px;
+    background-color: var(--secondaryBlue);
+    border-radius: 20px;
+}
+
+h1, h4 {
+    margin: 0;
+    color: var(--darkFontColor);
+}
+
+button {
+    position: relative;
+    width: 340px;
+    height: 50px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--backgroundColor);
+    color: var(--lightlightBlue);
+    font-size: 15px;
+    font-family: "bahnschrift";
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--lightlightBlue);
+    transition: left 0.5s ease-in-out;
+}
+
+button::after {
+    content: "not only heard, we listen";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--backgroundColor);
+    font-weight: bold; 
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+button:hover::before {
+    left: 0;
+}
+
+button:hover {
+    color: transparent; 
+    transform: scale(1.05); 
+}
+
+button:hover::after {
+    opacity: 1; 
+}
+
+.img-container {
+    background-color: var(--lightlightBlue);
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+}
+
+.img-container img {  
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.img-container:hover {
+    transform: scale(1.1);
+}
+
+.form-input {
+    background-color: var(--lightlightBlue);
+    padding: 10px;
+    border: 2px solid var(--lightlightBlue);
+    border-radius: 10px;
+    width: 319px;
+    color: var(--darkFontColor);
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    border-color: var(--lightlightBlue);
+    opacity: 1;
+}
+.form-field {
+    padding-left: 10px;
+}
+
+.title {
+    padding-left: 10px;
+}
+::placeholder {
+    font-family: "bahnschrift";
+    color: var(--darkFontColor);
+    opacity: 0.7; 
+}
+input {
+    font-family: "bahnschrift";
+    font-size: 16px;
+    color: var(--darkFontColor);
+}
